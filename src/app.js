@@ -2,8 +2,13 @@ const koa = require('koa');
 const Router = require('@koa/router');
 const { log } = require('./utils/log');
 const { getModules } = require('./utils');
+require('dotenv').config();
+
+
+
 
 function startServe() {
+  console.log(process.env.NODE_ENV);
   return new Promise((resolve) => {
     const app = new koa();
 

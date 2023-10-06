@@ -1,8 +1,11 @@
+
+const logger = require('./myLogger');
+
 function log(...arg) {
   if (process.env.NODE_ENV === 'test') {
     return;
   }
-  console.log(...arg);
+  logger.info(...arg);
 }
 
 module.exports = {
